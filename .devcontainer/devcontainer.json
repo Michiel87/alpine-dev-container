@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.194.0/containers/javascript-node
+{
+  "name": "Node.js",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  // Set *default* container specific settings.json values on container create.
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "extensions": [
+          "github.vscode-github-actions",
+          "github.copilot",
+          "github.copilot-chat",
+          "dbaeumer.vscode-eslint",
+          "ms-azuretools.vscode-docker",
+          "eamodio.gitlens",
+          "mechatroner.rainbow-csv",
+          "esbenp.prettier-vscode"
+        ]
+      }
+    },
+    // Add the IDs of extensions you want installed when the container is created.
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [
+      3000
+    ]
+  }
